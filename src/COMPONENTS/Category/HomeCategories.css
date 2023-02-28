@@ -8,7 +8,8 @@
 }
 
 .homecategories .container {
-    width: 300px;
+    width: 24%;
+    min-width: 300px;
     height: 300px;
     overflow: hidden;
     display: flex;
