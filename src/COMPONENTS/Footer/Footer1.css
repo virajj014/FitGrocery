@@ -1,0 +1,35 @@
+.footer1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(240, 240, 240);
+    height: 350px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.footer1 .left{
+    width: 45%;
+}
+.footer1 .left img{
+    width: 100%;
+}
+
+.footer1 .right{
+    width: 45%;
+}
+
+.footer1 .right h1{
+    width: 80%;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.footer1 .right p{
+    width: 60%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
