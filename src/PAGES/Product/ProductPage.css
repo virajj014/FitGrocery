@@ -1,0 +1,122 @@
+.productpage .pc1 {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.productpage .pc1 .c11 {
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+}
+
+.productpage .pc1 .c11 .imgset{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+.productpage .pc1 .c11 .imgset img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+
+.productpage .pc1 .c11 .imgset .active {
+    border: 5px solid var(--col1);
+    width: 95%;
+}
+
+.productpage .pc1 .c11 .imgbig {
+    width: 70%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+}
+
+.productpage .pc1 .c12 {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+
+.productpage .pc1 .c12 .c121 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.productpage .pc1 .c12 .price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--col1);
+    display: flex;
+    align-items: center;
+}
+
+
+.productpage .pc1 .c12 .price span{
+    font-size: 20px;
+    font-weight: 400;
+    color: gray;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+
+.productpage .pc1 .c12 .incrdecr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+}
+
+.productpage .pc1 .c12 .incrdecr button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--col1);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.productpage .pc1 .c12 .incrdecr p{
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.productpage .btncont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.productpage .btncont button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--col1);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.productpage .btncont button:hover {
+    background-color: black;
+}

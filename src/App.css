@@ -19,3 +19,26 @@
   margin: 0px;
   padding: 0px;
 }
+
+.goback{
+  background-color: var(--col1);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 10px 0px;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  min-width: 100px;
+}
+
+.goback svg{
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
