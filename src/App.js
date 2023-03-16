@@ -5,6 +5,8 @@ import './App.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductPage from './PAGES/Product/ProductPage';
+import About from './PAGES/Extra/About';
+import Contact from './PAGES/Extra/Contact';
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +18,8 @@ const App = () => {
             <ProductPage/>
           }
         />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<div>
           <h1>404 NOT FOUND</h1>
         </div>} />

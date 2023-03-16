@@ -1,0 +1,144 @@
+.extrapage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pgleft{
+    display: flex;
+}
+
+.pgright{
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+.pgcommon{
+    width: 80%;
+    margin: 80px;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.pgcommon div{
+    width: 45%;
+}
+
+.pgcommon div h1{
+    font-size: 55px;
+    font-weight: 400;
+    color: var(--col1);
+    margin: 0 0 10px 0;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+
+.pgcommon div p{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(36, 36, 36);
+    margin: 0 0 10px 0;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+
+.extrapageform {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    width: 50%;
+    /* max-width: 700px; */
+    align-self: center;
+}
+
+.extrapageform .fromgroup {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    /* background-color: aqua; */
+}
+
+.extrapageform div label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--col1);
+}
+
+.extrapageform div input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.extrapageform div textarea {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+.extrapageform button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--col1);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+.extrapage .formheading{
+    color: var(--col1);
+    margin: 0 0 30px 0;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+    font-size: 60px;
+}
+
+
+
+.extrapageform .rating{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.extrapageform .rating .starinactive{
+    color: lightgray;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.extrapageform .rating .starinactive:hover{
+    color: var(--col1);
+}
+
+
+.extrapageform .rating .staractive{
+    color: gold;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    fill: gold;
+}
