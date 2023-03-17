@@ -42,3 +42,9 @@
   width: 15px;
   height: 15px;
 }
+
+
+.stylenone{
+  text-decoration: none;
+  color: inherit;
+}
