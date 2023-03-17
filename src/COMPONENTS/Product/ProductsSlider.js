@@ -37,9 +37,9 @@ const ProductsSlider = ({ products, categoryname }) => {
             swipeable={true}
             draggable={true}
             >
-                {products.map((item)=>{
+                {products.map((item,index)=>{
                     return (
-                        <ProductCard data={item} key={item.id} />
+                        <ProductCard data={item} key={index} />
                     )
                 })}
             </Carousel>

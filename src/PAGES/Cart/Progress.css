@@ -1,0 +1,53 @@
+.cart .progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0px 10px;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.383);
+    margin: 20px;
+    min-height: 80px;
+    align-items: center;
+}
+
+.cart .progress .c1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.progress .c1 svg {
+    width: 30px;
+    height: 30px;
+    color: var(--col3);
+    cursor: pointer;
+}
+.progress .c1 span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--col3);
+    cursor: pointer;
+}
+
+.progress .c11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress .c11 svg {
+    width: 30px;
+    height: 30px;
+    color: var(--col1);
+    cursor: pointer;
+}
+.progress .c11 span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--col1);
+    cursor: pointer;
+}

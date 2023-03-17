@@ -16,86 +16,432 @@ const Home = () => {
 
   const products = [
     {
-      id: 1,
-      productimage: img1,
-      productname: 'Product 1',
-      productprice: 100,
-      counttype: '1 each',
-      discountprecent: 12
+        "ProductId": 1,
+        "ProductName": "Product 1",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img1
+            },
+            {
+                id: 2,
+                image: img2
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 80,
+        "ProductDiscount": 20,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     },
     {
-      id: 2,
-      productimage: img2,
-      productname: 'Product 2',
-      productprice: 200,
-      counttype: '1 per kg',
-      discountprecent: 12
+        "ProductId": 2,
+        "ProductName": "Product 2",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img2
+            },
+            {
+                id: 2,
+                image: img1
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 90,
+        "ProductDiscount": 10,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     },
     {
-      id: 3,
-      productimage: img3,
-      productname: 'Product 3',
-      productprice: 300,
-      counttype: '1 per kg',
-      discountprecent: 19
+        "ProductId": 3,
+        "ProductName": "Product 3",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img3
+            },
+            {
+                id: 2,
+                image: img2
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 70,
+        "ProductDiscount": 30,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     },
     {
-      id: 4,
-      productimage: img4,
-      productname: 'Product 4',
-      productprice: 400,
-      counttype: '1 per kg',
-      discountprecent: 12
+        "ProductId": 1,
+        "ProductName": "Product 1",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img1
+            },
+            {
+                id: 2,
+                image: img2
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 80,
+        "ProductDiscount": 20,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     },
     {
-      id: 5,
-      productimage: img1,
-      productname: 'Product 5',
-      productprice: 100,
-      counttype: '1 each',
-      discountprecent: 12
+        "ProductId": 2,
+        "ProductName": "Product 2",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img2
+            },
+            {
+                id: 2,
+                image: img1
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 90,
+        "ProductDiscount": 10,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     },
     {
-      id: 6,
-      productimage: img2,
-      productname: 'Product 6',
-      productprice: 200,
-      counttype: '1 per kg',
-      discountprecent: 12
-    },
-    {
-      id: 7,
-      productimage: img3,
-      productname: 'Product 7',
-      productprice: 300,
-      counttype: '1 per kg',
-      discountprecent: 19
-    },
-    {
-      id: 8,
-      productimage: img4,
-      productname: 'Product 8',
-      productprice: 400,
-      counttype: '1 per kg',
-      discountprecent: 12
-    },
-    {
-      id: 9,
-      productimage: img1,
-      productname: 'Product 9',
-      productprice: 100,
-      counttype: '1 each',
-      discountprecent: 12
-    },
-    {
-      id: 10,
-      productimage: img2,
-      productname: 'Product 10',
-      productprice: 200,
-      counttype: '1 per kg',
-      discountprecent: 12
+        "ProductId": 3,
+        "ProductName": "Product 3",
+        "ProductDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "ProductImage": [
+            {
+                id: 1,
+                image: img3
+            },
+            {
+                id: 2,
+                image: img2
+            },
+            {
+                id: 3,
+                image: img3
+            }
+        ],
+        "ProductCode": "P1",
+        "ProductCategory": "Category 1",
+        "ProductSubCategory": "Sub Category 1",
+        "ProductBrand": "Brand 1",
+        "ProductColor": "Color 1",
+        "ProductSize": "Size 1",
+        "ProductWeight": "Weight 1",
+        "ProductMaterial": "Material 1",
+        "ProductQuantity": 10,
+        "ProductUnit": "Unit 1",
+        "ProductPrice": 100,
+        "SalesPrice": 70,
+        "ProductDiscount": 30,
+        "ProductDiscountType": "Percentage",
+        "ProductTax": 20,
+        "ProductTaxType": "Percentage",
+        "ProductShippingCharge": 20,
+        "ProductShippingChargeType": "Percentage",
+        "ProductShippingTime": "1-2 days",
+        "ProductShippingTimeType": "Days",
+        "ProductShippingLocation": "Location 1",
+        "ProductShippingLocationType": "Country",
+        "ProductShippingReturnPolicy": "Return Policy 1",
+        "ProductShippingReturnPolicyType": "Days",
+        "ProductShippingReturnPolicyDescription": "Return Policy Description 1",
+        "ProductShippingReturnPolicyDescriptionType": "Days",
+        "ProductReviews": [
+            {
+                "ReviewId": 1,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 5,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            },
+            {
+                "ReviewId": 2,
+                "Name": "Viraj",
+                "Email": "",
+                "Rating": 1,
+                "Date": "2021-08-01",
+                "Review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            },
+            {
+                "ReviewId": 3,
+                "Name": "Harshal Jain",
+                "Email": "",
+                "Rating": 4,
+                "Date": "2021-08-01",
+                "Review": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            }
+        ]
     }
-  ]
+]
   return (
     <div>
       <Navbar reloadnavbar={false}/>
