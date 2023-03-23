@@ -48,3 +48,11 @@
   text-decoration: none;
   color: inherit;
 }
+
+.mainhead1{
+  color: var(--col1);
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px 10px;
+  margin-top: 10px;
+}

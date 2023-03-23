@@ -1,0 +1,112 @@
+.shippingcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    width: 70%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.383);
+}
+
+.shippingcont .previous {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.shippingcont h2 {
+    /* background-color: aqua; */
+    width: 100%;
+    font-size: 25px;
+}
+
+.shippingcont .selectdate{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shippingcont .selectdate input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--col2);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.shippingcont .selectdate input:focus{
+    outline: none;
+    border: 1px solid var(--col1);
+}
+
+.shippingcont h3{
+    /* background-color: aqua; */
+    font-size: 20px;
+}
+
+.shippingcont .radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.shippingcont .radio span {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--col2);
+}
+/* .shippingcont .radio input[type="radio"] {
+
+} */
+
+.shippingadd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px 20px;
+}
+
+.shippingcont .shippingadd input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--col2);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.shippingcont .shippingadd input:focus{
+    outline: none;
+    border: 1px solid var(--col1);
+}
+
+.shippingadd button {
+    width: 20%;
+    height: 30px;
+    border: none;
+    background-color: var(--col1);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}

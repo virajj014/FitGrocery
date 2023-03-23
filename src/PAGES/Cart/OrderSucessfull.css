@@ -1,0 +1,18 @@
+.ordersuccessfull{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.383);
+}
+
+.ordersuccessfull svg{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    color: var(--col1);
+}

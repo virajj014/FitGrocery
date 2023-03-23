@@ -6,13 +6,18 @@ import Navbar from '../../COMPONENTS/Navbar/Navbar'
 import './Cart.css'
 import './Progress.css'
 import './CartContainer.css'
+import './ShippingContainer.css'
+import './PaymentContainer.css'
+import './OrderSucessfull.css'
 const Cart = () => {
   const [cartdata, setcartdata] = React.useState([])
   const [subtotal, setsubtotal] = React.useState(0)
   const [shipping, setshipping] = React.useState(0)
   const [active, setactive] = React.useState(1)
   const [tax, settax] = React.useState(0)
-
+  const [deliverydate, setdeliverydate] = React.useState(
+    new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+  )
 
   const getcartitemsfromlocalstorage = () => {
     let cart = JSON.parse(localStorage.getItem('cart'))
@@ -53,6 +58,21 @@ const Cart = () => {
     localStorage.setItem('cart', JSON.stringify(temp))
     getcartitemsfromlocalstorage()
   }
+
+  const savedaddress = [
+    {
+      AddressLine1: "Address Line 1",
+      AddressLine2: "Address Line 2",
+      AddressLine3: "Address Line 3",
+      postalcode: "123456"
+    },
+    {
+      AddressLine1: "Address Line 1",
+      AddressLine2: "Address Line 2",
+      AddressLine3: "Address Line 3",
+      postalcode: "123456"
+    }
+  ]
   return (
     <div>
       <Navbar reloadnavbar={reloadnavbar} />
@@ -326,19 +346,97 @@ const Cart = () => {
         {
           active == 2 &&
           <div className='shippingcont'>
-            <p>Shipping cont</p>
+            <div className='selectdate'>
+              <h2 className='mainhead1'>Select Delivery Date</h2>
+              <input
+                min={new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                type='date'
+                value={deliverydate}
+                onChange={(e) => {
+                  setdeliverydate(e.target.value)
+                }}
+              />
+            </div>
+            <div className='previous'>
+              <h2 className='mainhead1'>Previous Saved Address</h2>
+              {
+                savedaddress.length > 0 ?
+                  savedaddress.map((item, index) => {
+                    return (
+                      <div className='radio' key={index}>
+                        <input type='radio' name='address' id={index} />
+                        <span>
+                          {
+                            item.AddressLine1 + ', ' + item.AddressLine2 + ', ' + item.AddressLine3 + ', ' + item.postalcode
+                          }
+                        </span>
+                      </div>
+                    )
+                  })
+                  :
+                  <div className='emptyaddress'>
+                    <p>No address Found</p>
+                  </div>
+              }
+            </div>
+            <h3>OR</h3>
+            <div className='shippingadd'>
+              <input type='text' placeholder='Address Line 1' />
+              <input type='text' placeholder='Address Line 2' />
+              <input type='text' placeholder='Address Line 3' />
+              <input type='text' placeholder='Postal Code' />
+              <button>Save</button>
+            </div>
+
           </div>
         }
         {
           active == 3 &&
           <div className='paymentcont'>
-            <p>Payment cont</p>
+            <h2 className='mainhead1'>Select Payment Method</h2>
+            <div className='paymenttypes'>
+              <div className='c1'>
+                <input type='radio' name='payment' id='payment1' />
+                <img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png'
+                  alt='paypal'
+                />
+              </div>
+              <div className='c1'>
+                <input type='radio' name='payment' id='payment1' />
+                <img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png'
+                  alt='paypal'
+                />
+              </div>
+              <div className='c1'>
+                <input type='radio' name='payment' id='payment1' />
+                <img src='https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png'
+                  alt='paypal'
+                />
+              </div>
+            </div>
+
+            <div
+              className='paymentagreement'
+            >
+              <input type='checkbox' name='agreement' id='agreement' />
+              <label htmlFor='agreement'>I agree to the terms and conditions</label>
+            </div>
+
+            <div className='c2'>
+              <span>Net Total</span>
+              &nbsp;&nbsp;
+              <span>$ {(subtotal + tax + shipping).toFixed(2)}</span>
+            </div>
           </div>
         }
         {
           active == 4 &&
           <div className='ordersuccessfull'>
-            <p>Order successfull</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+
+<h2 className='mainhead1'>Order Placed Successfully</h2>
           </div>
         }
 
@@ -398,7 +496,8 @@ const Cart = () => {
             >Back</button> */}
             <button className='nextbtn'
               onClick={() => {
-                alert('Order placed successfully')
+                // alert('Order placed successfully')
+                window.location.href = '/'
               }}
             >Go To Home</button>
           </div>
