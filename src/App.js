@@ -11,6 +11,7 @@ import Login from './PAGES/Auth/Login';
 import Signup from './PAGES/Auth/Signup';
 import ForgotPassword from './PAGES/Auth/ForgotPassword';
 import Cart from './PAGES/Cart/Cart';
+import UserProfile from './PAGES/User/UserProfile';
 const App = () => {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/signup" element={<Signup/>} />
         <Route path="/forgotpassword" element={<ForgotPassword/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path='/user/:activepage' element={<UserProfile/>} />
         <Route path="*" element={<div>
           <h1>404 NOT FOUND</h1>
         </div>} />
