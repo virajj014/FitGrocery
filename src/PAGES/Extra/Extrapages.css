@@ -142,3 +142,92 @@
     cursor: pointer;
     fill: gold;
 }
+
+
+/* ////////////////////////////////////////////////////////// */
+
+.pgcont1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    align-self: center;
+    padding: 40px;
+}
+
+.pgcont1 h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(119, 119, 119);
+    margin-bottom: 10px;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+.pgcont1 p {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+    margin: 0 0 10px 0;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+/* ///////////////////////////////FAQ */
+
+
+.extrapage .faqcontainer{
+    width: 60%;
+    background-color: white;
+    align-self: center;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.extrapage .faqcontainer svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.extrapage .faq{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.extrapage .faq .faqhead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+.extrapage .faqcontainer .faqhead h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(119, 119, 119);
+    margin: 0;
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+.extrapage .faqcontainer .faqbody p {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+    padding: 0;
+    /* text-align: center; */
+    letter-spacing: 1px;
+    margin: 0px;
+}
