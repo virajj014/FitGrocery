@@ -28,3 +28,29 @@
     font-size: 18px;
     padding: 0px;
 }
+
+@media (max-width: 950px)
+{
+    .categorysidebar {
+        width: 40%;
+        margin: 20px 0px;
+    }
+    
+}
+
+
+@media (max-width: 650px)
+{
+    .categorysidebar {
+        width: 100%;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    
+}

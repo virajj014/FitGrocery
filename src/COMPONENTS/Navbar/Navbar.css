@@ -113,3 +113,79 @@ nav .s2 a:hover{
     color: var(--col1);
 }
 
+
+nav .s3 {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 20px;
+    }
+
+    nav .s1{
+        display: none;
+    }
+
+    nav .s2{
+        display: none;
+    }
+
+
+    nav .s3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 0px;
+        width: 100%;
+    }
+
+    nav .s31 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0px;
+    }
+
+    nav .searchbar {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+    nav .s3 ul{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0px;
+        margin: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .s3 ul li{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--col1);
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+    }
+    nav .s3 .s32 svg{
+        color: white;
+    }
+
+    nav #dropdown-basic{
+        color: white;
+    }
+}
