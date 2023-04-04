@@ -60,11 +60,11 @@ const YourOrders = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Oder ID</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Total</th>
-                        <th>Action</th>
+                        <th scope='col'>Oder ID</th>
+                        <th scope='col'>Date</th>
+                        <th scope='col'>Status</th>
+                        <th scope='col'>Total</th>
+                        <th scope='col'>Invoice</th>
                     </tr>
                 </thead>
 
@@ -72,17 +72,17 @@ const YourOrders = () => {
                     {data.map((item, index) => {
                         return (
                             <tr key={index}>
-                                <td>{item.id}</td>
-                                <td>{item.date}</td>
-                                <td>
+                                <td data-label='OrderID'>{item.id}</td>
+                                <td data-label='OrderDate'>{item.date}</td>
+                                <td data-label='Delivery Status'>
                                     <p>
                                         {item.status == 'Delivered' && <span className='greendot'></span>}
                                         {item.status == 'On the way' && <span className='yellowdot'></span>}
                                         {item.status == 'Cancelled' && <span className='reddot'></span>}
                                         {item.status}</p>
                                 </td>
-                                <td>${item.total}</td>
-                                <td>
+                                <td data-label='Total'>${item.total}</td>
+                                <td data-label='Invoice'>
                                     <button className='mainbutton1'>View</button>
                                 </td>
                             </tr>

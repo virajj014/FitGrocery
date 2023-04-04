@@ -15,6 +15,7 @@
     border: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
     overflow: hidden;
+    table-layout: fixed;
     /* background-color: aqua; */
 }
 
@@ -72,3 +73,36 @@
     background-color: rgb(255, 81, 81);
 }
 
+@media (max-width: 850px){
+    .yourorders  table {
+        border: 0;
+    }
+
+    .yourorders  table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .yourorders table tr {
+        /* border-bottom: 3px solid #ddd; */
+        display: block;
+        margin-bottom: 20px;
+        border: none;
+    }
+    .yourorders table td {
+        border: none;
+        /* border-bottom: 1px solid #ddd; */
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .yourorders table caption{
+        font-size: 16px;
+    }
+}

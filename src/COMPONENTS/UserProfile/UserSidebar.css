@@ -12,10 +12,16 @@
     padding: 20px;
 }
 
-.usersidebar  svg {
+.usersidebar .s1 svg {
     width: 30px;
     height: 30px;
     color: gray;
+}
+
+.usersidebar .s2 svg {
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
 }
 
 .usersidebar .s1:hover{
@@ -27,8 +33,46 @@
 
 
 .usersidebar .s2{
-    background-color: rgb(246, 246, 246);
+    background-color: var(--col1);
     border-radius: 5px;
     cursor: pointer;
-    color: grey;
+    color: white;
+}
+@media (max-width: 800px) {
+    .usersidebar span{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .usersidebar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+    }
+    .usersidebar .s1 , .usersidebar .s2{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px;
+    }
+    .usersidebar .s1{
+        background-color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.1);
+        padding: 5px 20px;
+    }
+    .usersidebar .s2{
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.1);
+        padding: 5px 20px;
+ 
+    }
+    .usersidebar span{
+        font-size: 12px;
+    }
 }

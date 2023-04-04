@@ -1,10 +1,10 @@
-.userprofile{
+.userprofile {
     display: flex;
     flex-direction: column;
 }
 
 
-.userprofilein{
+.userprofilein {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -15,7 +15,7 @@
 .userprofile .userprofilein .left {
     width: 20%;
     /* background-color: aqua; */
-    border:  1px solid rgb(207, 207, 207);
+    border: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
     min-height: 50vh;
 }
@@ -23,7 +23,96 @@
 .userprofile .userprofilein .right {
     width: 60%;
     /* background-color: aqua; */
-    border:  1px solid rgb(207, 207, 207);
+    border: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
     min-height: 50vh;
+}
+
+@media (max-width: 1000px) {
+    .userprofile .userprofilein .left {
+        width: 30%;
+        /* background-color: aqua; */
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        min-height: 50vh;
+    }
+
+    .userprofilein {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10vh;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1000px){
+    .userprofile .userprofilein .left {
+        width: 30%;
+        /* background-color: aqua; */
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        min-height: 50vh;
+    }
+    .userprofile .userprofilein .right {
+        width: 68%;
+        /* background-color: aqua; */
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        min-height: 50vh;
+    }
+
+    .userprofilein {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10vh;
+        gap: 10px;
+    }
+}
+
+/* @media (max-width: 800px) {
+    .userprofile .userprofilein .left {
+        width: 20%;
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        min-height: 50vh;
+    }
+    .userprofile .userprofilein .right {
+        width: 78%;
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        min-height: 50vh;
+    }
+} */
+
+@media (max-width: 500px){
+    .userprofilein {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10vh;
+        gap: 20px;
+    }
+
+    .userprofile .userprofilein .left {
+        width: 97%;
+        /* background-color: aqua; */
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        /* min-height: 50vh; */
+        align-self: center;
+        min-height: 0;
+    }
+
+    .userprofile .userprofilein .right {
+        width: 97%;
+        /* background-color: aqua; */
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 5px;
+        /* min-height: 50vh; */
+        align-self: center;
+        min-height: 0;
+    }
 }

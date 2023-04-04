@@ -56,6 +56,7 @@
     cursor: pointer;
     box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.172);
     padding: 10px;
+    margin: 10px;
 }
 
 .useraddress .addnew{
@@ -123,4 +124,73 @@
     border-radius: 5px;
     padding: 10px 20px;
     margin: 10px 0px;
+}
+
+
+@media (max-width: 1000px) {
+    .useraddress .addnewbtn{
+        width: 40px;
+        height: 40px;
+        background-color: var(--col1);
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.172);
+        padding: 5px;
+    }
+    .addressin {
+        width: 100%;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    
+    
+    .addressin .address {
+        height: auto;
+        align-self: center;
+        width: 97%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #d0d0d0;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 100px;
+        gap:5px;
+    }
+    
+    .addressin .address .delbtn {
+        background-color: var(--col1);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: -2px;
+        top: -10px;
+        cursor: pointer;
+    }
+    
+}
+@media (max-width: 900px) {
+    .useraddress .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    
+    .useraddress .form .form-group{
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        align-self: center;
+        margin: 10px;
+    }
+    
 }
