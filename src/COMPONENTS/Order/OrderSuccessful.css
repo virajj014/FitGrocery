@@ -1,0 +1,131 @@
+.OrdersSuccessful{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.499);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmationcont{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    z-index: 1000;
+}
+.confirmationcont::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+.confirmationcont::-webkit-scrollbar-thumb{
+    background-color: var(--col1);
+    border-radius: 5px;
+}
+
+.popup__close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.8;
+    border: none;
+    outline: none;
+}
+
+.popup__close-btn:hover{
+    background-color: var(--col1);
+    color: white;
+}
+
+
+/*  */
+.confirmationcont .c1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.confirmationcont .c1 svg {
+    width: 100px;
+    height: 100px;
+    color: var(--col1);
+}
+
+.confirmationcont .c2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+}
+
+.confirmationcont .c2 h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--col1);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.confirmationcont .c2 div {
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.confirmationcont .c2 div p {
+    width: 45%;
+
+}
+
+
+.confirmationcont .c2 div p:first-child {
+    font-weight: 300;
+    color: var(--col2);
+    font-size: 15px;
+}
+
+.confirmationcont .c2 div p:last-child {
+    font-weight: 600;
+    color: var(--col2);
+    font-size: 15px;
+}
+
+
+.OrdersSuccessful .totalcont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.OrdersSuccessful .totalcont div{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
