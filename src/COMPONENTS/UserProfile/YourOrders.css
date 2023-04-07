@@ -1,4 +1,4 @@
-.yourorders{
+.yourorders {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,49 +9,58 @@
     /* overflow: hidden; */
 }
 
-.yourorders table {
-    width: 100%;
+
+.yourorderstable {
+    border: 1px solid #ccc;
     border-collapse: collapse;
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 5px;
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     table-layout: fixed;
-    /* background-color: aqua; */
 }
 
-.yourorders table tr {
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 5px;
+
+.yourorderstable  thead tr {
+    background-color: var(--col1);
+    color: #fff;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
-.yourorders table tr th {
-    padding: 10px 20px;
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 5px;
-    background-color: rgb(246, 246, 246);
-    color: grey;
+.yourorderstable tr {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
 
-.yourorders table tr td {
+
+.yourorderstable  th,
+.yourorderstable  td {
+    text-align: center;
+}
+
+.yourorderstable tr th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 10px 0px;
+}
+
+
+.yourorderstable tr td {
     padding: 5px 20px;
     border: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
     color: grey;
 }
 
-.yourorders table tr td button {
+
+.yourorderstable tr td button {
     padding: 5px 20px;
     margin: 0px;
     font-size: 16px;
 }
 
-.yourorders table tr td p{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    margin-bottom: 0px;
-}
-.yourorders table tr td p .greendot{
+.yourorderstable tr td .greendot {
     content: '';
     width: 10px;
     height: 10px;
@@ -59,26 +68,31 @@
     background-color: green;
 }
 
-.yourorders table tr td  p .yellowdot{
+.yourorderstable tr td div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.yourorderstable tr td .yellowdot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: orange;
 }
 
-.yourorders table tr td  p .reddot{
+.yourorderstable tr td .reddot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: rgb(255, 81, 81);
 }
 
-@media (max-width: 850px){
-    .yourorders  table {
-        border: 0;
-    }
 
-    .yourorders  table thead {
+@media screen and (max-width: 1200px) {
+    
+    .yourorderstable thead {
         border: none;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -88,21 +102,23 @@
         position: absolute;
         width: 1px;
     }
-    .yourorders table tr {
-        /* border-bottom: 3px solid #ddd; */
+    .yourorderstable tr {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: .625em;
         border: none;
     }
-    .yourorders table td {
+
+    .yourorderstable tr td {
         border: none;
-        /* border-bottom: 1px solid #ddd; */
+        border-radius: 0px;
         display: block;
         font-size: .8em;
         text-align: right;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .yourorders table caption{
-        font-size: 16px;
+    .yourorderstable td::before{
+        content:attr(data-label);
     }
 }

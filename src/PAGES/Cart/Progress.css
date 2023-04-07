@@ -51,3 +51,24 @@
     color: var(--col1);
     cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 800px){
+    .cart .progress {
+        width: 95%;
+
+    }
+}
+
+
+@media screen and (max-width: 400px){
+   
+    .cart .progress svg{
+        width: 20px;
+        height: 20px;
+    }
+    .cart .progress span{
+        font-size: 12px;
+    }
+}

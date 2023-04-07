@@ -110,3 +110,19 @@
     cursor: pointer;
     color: white;
 }
+
+
+@media screen and (max-width: 800px) {
+    .shippingcont {
+        width: 95%;
+    }
+    .shippingcont .previous {
+        width: 95%;
+    }
+    .shippingcont .selectdate {
+        width: 95%;
+    }
+    .shippingcont .shippingadd {
+        width: 95%;
+    }
+}

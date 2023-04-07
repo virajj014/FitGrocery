@@ -3,7 +3,7 @@ import './OrderSuccessful.css'
 import { useRecoilState } from 'recoil'
 import { orderSuccessfulProvider } from '../../Providers/OrderSuccessfulProvider'
 
-const OrderSuccessful = ({ orderid, message }) => {
+const OrderSuccessful = ({ orderid, message, redirecto }) => {
 
     const [ordersuccesscont, setordersuccesscont] = useRecoilState(orderSuccessfulProvider)
     const [orderdata, setorderdata] = useState({
@@ -36,7 +36,13 @@ const OrderSuccessful = ({ orderid, message }) => {
             className='OrdersSuccessful'
         >
             <button className='popup__close-btn'
-                onClick={() => setordersuccesscont(false)}
+                onClick={() => {
+
+                    if(redirecto == 'userorders'){
+                        window.location.href = '/user/yourorders'
+                    }
+                    setordersuccesscont(false)
+                }}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -130,11 +136,13 @@ const OrderSuccessful = ({ orderid, message }) => {
                                 orderdata?.OrderItems && orderdata.OrderItems.map((item, index) => {
                                     return (
                                         <tr key={index}>
-                                            <td>{index + 1}</td>
-                                            <td>{item.ProductName}</td>
-                                            <td>${item.Price}</td>
-                                            <td>{item.Quantity}</td>
-                                            <td>${item.Price * item.Quantity}</td>
+                                            <td>
+                                                <p>{index + 1}</p>
+                                            </td>
+                                            <td><p>{item.ProductName}</p></td>
+                                            <td><p>${item.Price}</p></td>
+                                            <td><p>{item.Quantity}</p></td>
+                                            <td><p>${item.Price * item.Quantity}</p></td>
                                         </tr>
                                     )
                                 })

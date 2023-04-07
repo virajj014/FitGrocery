@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SingleBanner from '../../COMPONENTS/Banners/SingleBanner'
 import Footer1 from '../../COMPONENTS/Footer/Footer1'
 import Footer2 from '../../COMPONENTS/Footer/Footer2'
@@ -9,6 +9,9 @@ import './CartContainer.css'
 import './ShippingContainer.css'
 import './PaymentContainer.css'
 import './OrderSucessfull.css'
+import { useRecoilState } from 'recoil'
+import { orderSuccessfulProvider } from '../../Providers/OrderSuccessfulProvider'
+import OrderSuccessful from '../../COMPONENTS/Order/OrderSuccessful'
 const Cart = () => {
   const [cartdata, setcartdata] = React.useState([])
   const [subtotal, setsubtotal] = React.useState(0)
@@ -73,9 +76,16 @@ const Cart = () => {
       postalcode: "123456"
     }
   ]
+
+
+  const [selectedorderid, setselectedorderid] = useState(0)
+  const [ordersuccesscont, setordersuccesscont] = useRecoilState(orderSuccessfulProvider)
   return (
     <div>
       <Navbar reloadnavbar={reloadnavbar} />
+      {
+        ordersuccesscont && <OrderSuccessful orderid={selectedorderid} message={`Order Placed Successfully, Order ID: ${selectedorderid}`}  redirecto='userorders'/>
+      }
       <SingleBanner
         heading="My Cart"
         bannerimage='https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
@@ -218,7 +228,7 @@ const Cart = () => {
                       cartdata.map((item, index) => {
                         return (
                           <tr key={index} className="cartitemrow">
-                            <td
+                            <td data-label="Product"
                             >
                               <div className='cartproduct'
                                 onClick={() => {
@@ -233,7 +243,9 @@ const Cart = () => {
                               </div>
                             </td>
 
-                            <td>
+                            <td
+                              data-label="Quantity"
+                            >
                               <div className='quantity'>
                                 <button className='minus'
                                   onClick={() => {
@@ -260,7 +272,9 @@ const Cart = () => {
                               </div>
                             </td>
 
-                            <td>
+                            <td
+                              data-label="Price"
+                            >
                               <p>
                                 $ {item.productdata.SalesPrice ? item.productdata.SalesPrice.toFixed(2) : 0.00}
                               </p>
@@ -272,7 +286,9 @@ const Cart = () => {
                               }</p>
                             </td>
 
-                            <td>
+                            <td
+                              data-label="Remove"
+                            >
                               <div className='delbtn'
                                 onClick={() => {
                                   removeitemfromcart(index)
@@ -436,7 +452,9 @@ const Cart = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
             </svg>
 
-<h2 className='mainhead1'>Order Placed Successfully</h2>
+            <h2 className='mainhead1'>Order Placed Successfully</h2>
+            <p>Thank you for shopping with us</p>
+            <span>Order ID : 12345</span>
           </div>
         }
 
@@ -496,10 +514,10 @@ const Cart = () => {
             >Back</button> */}
             <button className='nextbtn'
               onClick={() => {
-                // alert('Order placed successfully')
-                window.location.href = '/'
+                setselectedorderid(12345)
+                setordersuccesscont(true)
               }}
-            >Go To Home</button>
+            >View Invoice</button>
           </div>
         }
       </div>

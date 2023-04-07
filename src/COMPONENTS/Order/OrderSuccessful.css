@@ -1,4 +1,4 @@
-.OrdersSuccessful{
+.OrdersSuccessful {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.499);
@@ -11,7 +11,7 @@
     z-index: 1000;
 }
 
-.confirmationcont{
+.confirmationcont {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -19,19 +19,22 @@
     height: 80vh;
     border-radius: 10px;
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 1000;
 }
-.confirmationcont::-webkit-scrollbar{
+
+.confirmationcont::-webkit-scrollbar {
     width: 10px;
     height: 10px;
     background-color: white;
 }
-.confirmationcont::-webkit-scrollbar-thumb{
+
+.confirmationcont::-webkit-scrollbar-thumb {
     background-color: var(--col1);
     border-radius: 5px;
 }
 
-.popup__close-btn{
+.popup__close-btn {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -50,7 +53,7 @@
     outline: none;
 }
 
-.popup__close-btn:hover{
+.popup__close-btn:hover {
     background-color: var(--col1);
     color: white;
 }
@@ -63,6 +66,10 @@
     align-items: center;
     flex-direction: column;
     padding: 20px;
+}
+
+.confirmationcont .c1  h2{
+    text-align: center;
 }
 
 .confirmationcont .c1 svg {
@@ -114,7 +121,7 @@
 }
 
 
-.OrdersSuccessful .totalcont{
+.OrdersSuccessful .totalcont {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,8 +131,84 @@
 }
 
 
-.OrdersSuccessful .totalcont div{
+.OrdersSuccessful .totalcont div {
     display: flex;
     width: 30%;
     justify-content: space-between;
+}
+
+
+.confirmationcont .c3 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+
+.confirmationcont .c3 table thead tr {
+    background-color: var(--col1);
+    color: white;
+}
+
+.confirmationcont .c3 table thead tr th {
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.confirmationcont .c3 table tr td {
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--col2);
+}
+
+.confirmationcont .c3 table p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    
+.confirmationcont .c1  h2{
+    text-align: center;
+    font-size: 20px
+}
+    .confirmationcont .c2 div{
+        width: 100%;
+    }
+    .confirmationcont .totalcont div{
+        width: 100%;
+    }
+
+    .confirmationcont .totalcont p{
+        font-size: 10px;
+    }
+    .confirmationcont .c3 table p{
+        font-size: 10px;
+    }
+
+
+    .confirmationcont .c2 div p {
+        width: 45%;
+    }
+    
+    
+    .confirmationcont .c2 div p:first-child {
+        font-weight: 300;
+        color: var(--col2);
+        font-size: 10px;
+    }
+    
+    .confirmationcont .c2 div p:last-child {
+        font-weight: 600;
+        color: var(--col2);
+        font-size: 10px;
+        text-align: right;
+    }
+    
+    
 }

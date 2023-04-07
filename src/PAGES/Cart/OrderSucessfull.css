@@ -16,3 +16,14 @@
     margin: 10px;
     color: var(--col1);
 }
+
+@media screen and (max-width: 800px){
+    .ordersuccessfull{
+        width: 95%;
+    }
+
+    .ordersuccessfull svg{
+        width: 80px;
+        height: 80px;
+    }
+}

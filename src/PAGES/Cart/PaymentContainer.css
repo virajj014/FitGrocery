@@ -60,3 +60,23 @@
     /* height: 100px; */
     padding: 10px;
 }
+
+
+
+@media screen and (max-width: 800px){
+    .paymentcont {
+        width: 95%;
+    }
+
+    .paymenttypes{
+        flex-direction: column;
+    }
+
+    .paymenttypes .c1 {
+        width: 90%;
+    }
+
+    .paymentcont .c2{
+        width: 90%;
+    }
+}

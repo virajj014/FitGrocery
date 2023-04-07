@@ -129,3 +129,61 @@
     margin: 0px;
     padding: 0px;
 }
+
+
+
+@media screen and (max-width: 900px) {
+    .cartcont {
+        width: 95%;
+    }
+
+    .cartcont table .cartitemrow td {
+        font-size: 14px;
+    }
+
+    .cartcont .cartproduct {
+        width: fit-content;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    
+   .cartcont table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .cartcont  table tr {
+        /* border-bottom: 3px solid #ddd; */
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .cartcont  table td {
+        /* border-bottom: 1px solid #ddd; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+}
